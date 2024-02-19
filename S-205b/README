@@ -1,5 +1,3 @@
-[S-205b-E-fill-out.py] Script Manual
-
 Overview:
 This script specifically populates the [S-205b] application form with the applicant's input from a downloaded Excel file from [forms.office.com]. 
 It processes the input, updates a template with the provided data, and saves the completed form in an [./output] directory, streamlining the process of filling out the [S-205b] application based on user submissions.
