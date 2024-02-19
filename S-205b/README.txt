@@ -1,37 +1,23 @@
-For a GitHub README, you can follow this basic format to structure your documentation:
+To run the script S-205b-E-fill-out.py that you've provided, you need to follow these steps. This script processes an input Excel file (from MS Forms), updates a template based on the input data, and saves the result in an output directory. Here's a simplified manual or run instruction:
 
-```markdown
-# Project Title
+Prepare Your Environment:
+Ensure you have Python installed on your system.
+Install the openpyxl library, if not already installed, using pip:
+pip install openpyxl
 
-One or two paragraphs providing an overview of your project.
+Prepare Your Files:
+Place your input Excel file (the one you receive from MS Forms) in a known directory.
+Ensure the script has access to the template file (S-205b-E-template.xlsx) located in ./template/.
+Ensure the output directory (./output/) exists or create it.
 
-## Installation
+Run the Script:
+Open a terminal or command prompt.
+Navigate to the directory containing the script.
+Run the script with the path to your input Excel file as an argument. For example:
 
-Instructions on how to install and set up your project. Include any dependencies required.
+python S-205b-E-fill-out.py /path/to/your/input.xlsx
+Replace /path/to/your/input.xlsx with the actual path to your input Excel file.
 
-```bash
-pip install -r requirements.txt
-```
+Check the Output:
+After running the script, check the ./output/ directory for the processed files named according to the requestor's full name and the template S-205b-E.xlsx
 
-## Usage
-
-Provide examples of how to use your project. Include code blocks and explanations for different use cases.
-
-```python
-import your_package
-your_package.do_something()
-```
-
-## Contributing
-
-Instructions for how to contribute to your project. Include guidelines for contributions, code of conduct, and the process for submitting pull requests.
-
-## License
-
-Specify the license under which your project is available. Example:
-
-```text
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE) file for details
-```
-
-## Acknowledgments
