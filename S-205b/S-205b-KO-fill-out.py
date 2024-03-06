@@ -4,7 +4,8 @@ from datetime import datetime
 
 # load the workbook and select the sheet
 input_data = sys.argv[1]  # Replace with your Excel file path
-output_template = 'S-205b-KO-template.xlsx'
+_output_template = './template/S-205b-KO-template.xlsx'
+_output_path = './output/'
 
 # read input excel form
 workbook1 = load_workbook(filename=input_data)
@@ -13,7 +14,7 @@ sheet1 = workbook1.active
 # parse data and update a template
 for _row in sheet1.iter_rows(min_row=2):
     # read output excel template
-    workbook2 = load_workbook(filename=output_template)
+    workbook2 = load_workbook(filename=_output_template)
     sheet2 = workbook2.active
     
     _rdate = datetime.strptime(str(_row[1].value), '%Y-%m-%d %H:%M:%S')
@@ -40,7 +41,7 @@ for _row in sheet1.iter_rows(min_row=2):
     print("{0},{1},{2}".format(_rname,_dmonth,_rdate))
     
     # Step 3: Save the workbook
-    _output_file = "{0}-{1}".format(_rname,'S-205b-KO.xlsx')
+    _output_file = "{0}/{1}-{2}".format(_output_path,_rname,'S-205b-KO.xlsx')
     workbook2.save(filename=_output_file)
     workbook2.close()
 
