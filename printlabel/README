@@ -1,0 +1,22 @@
+Overview:
+This Python script automates the creation of address and shipping labels, generating a PDF file from a CSV data source. 
+
+Prepare Your Environment:
+- Ensure Python 3.x is installed on your system.
+- Install the required Python libraries:
+  pip install pandas reportlab
+
+Prepare Your Files:
+- Ensure your address data is stored in a CSV file named list.csv, located in the same directory as the script. 
+  The CSV file should contain columns for Name, Street, City, State, and Zip.
+
+Run the Script:
+- $ python printlabel.py
+
+Check the Output:
+- The script generates a PDF file named result.pdf in the same directory. 
+
+Customization:
+- Refer to label-margin-length-legend.png image file to customize the code to fit your label template.
+- You can adjust the script to fit specific label sheets or preferences by modifying the variables related to label dimensions and page layout, 
+  such as num_columns, num_rows, column_width, row_height, and margins.
